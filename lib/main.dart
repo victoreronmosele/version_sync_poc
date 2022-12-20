@@ -30,7 +30,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final int _version = 0;
+  final int _version = 1;
 
   @override
   Widget build(BuildContext context) {
