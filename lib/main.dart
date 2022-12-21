@@ -30,7 +30,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final int _version = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -42,9 +41,8 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(
-              'Version $_version running on ${Theme.of(context).platform.name}',
-              style: Theme.of(context).textTheme.headline4,
+            Image.asset(
+              'assets/robot.jpeg',
             ),
           ],
         ),
