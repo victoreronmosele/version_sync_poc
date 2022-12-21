@@ -49939,7 +49939,7 @@ aD(){return new A.EB(B.l)}}
 A.EB.prototype={
 M(a){var s,r=null
 this.a.toString
-s=A.aeG("Version 5 Sync PoC",r,r,r)
+s=A.aeG("Version 6 Sync PoC",r,r,r)
 return new A.r2(new A.ob(s,new A.Fs(r,r,1/0,56),r),A.JJ(A.abg(A.a([new A.po(A.ae_(r,r,new A.oc("assets/robot.jpeg",r,r)),r)],t.F),B.Bs),r,r),r)}}
 A.a0Y.prototype={
 $0(){var s=t.m7
