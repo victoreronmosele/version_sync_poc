@@ -33,12 +33,12 @@ class _MyHomePageState extends State<MyHomePage> {
   static final appcastURL =
       'https://raw.githubusercontent.com/larryaasen/upgrader/master/test/testappcast.xml';
   static final cfg =
-      AppcastConfiguration(url: appcastURL, supportedOS: ['android']);
+      AppcastConfiguration(url: appcastURL, supportedOS: ['android', 'web']);
 
   @override
   Widget build(BuildContext context) {
     return UpgradeAlert(
-      upgrader: Upgrader(appcastConfig: cfg),
+      upgrader: Upgrader(appcastConfig: cfg, debugLogging: true, canDismissDialog: false, debugDisplayAlways: true, ),
       child: Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
