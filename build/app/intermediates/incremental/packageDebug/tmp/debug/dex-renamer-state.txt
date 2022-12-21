@@ -1,0 +1,4 @@
+#Wed Dec 21 15:19:53 WAT 2022
+base.0=/Users/victoreronmosele/development/mobile_projects/flutter_projects/version_sync_poc/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
