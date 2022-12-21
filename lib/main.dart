@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Version 4 Sync PoC'),
+      home: const MyHomePage(title: 'Version 5 Sync PoC'),
     );
   }
 }
