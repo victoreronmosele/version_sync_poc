@@ -31,7 +31,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   static final appcastURL =
-      'https://raw.githubusercontent.com/larryaasen/upgrader/master/test/testappcast.xml';
+      'https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/xmlappcast.xml';
   static final cfg =
       AppcastConfiguration(url: appcastURL, supportedOS: ['android', 'web', 'ios']);
 
