@@ -6,17 +6,14 @@
     <item>
       <title>Android Release</title>
       <enclosure sparkle:version="4.0" sparkle:os="android"/>
-      <sparkle:maximumSystemVersion>4.0.0</sparkle:maximumSystemVersion>
     </item>
     <item>
-      <title>Web Release</title>
+      <title>iOS Release</title>
       <enclosure sparkle:version="4.0" sparkle:os="ios"/>
-      <sparkle:maximumSystemVersion>4.0.0</sparkle:maximumSystemVersion>
     </item>
     <item>
       <title>Web Release</title>
       <enclosure sparkle:version="3.0.0" />
-      <sparkle:maximumSystemVersion>3.0.0</sparkle:maximumSystemVersion>
     </item>
 
   </channel>
