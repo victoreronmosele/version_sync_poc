@@ -33,7 +33,7 @@ class _MyHomePageState extends State<MyHomePage> {
   static final appcastURL =
       'https://raw.githubusercontent.com/larryaasen/upgrader/master/test/testappcast.xml';
   static final cfg =
-      AppcastConfiguration(url: appcastURL, supportedOS: ['android', 'web']);
+      AppcastConfiguration(url: appcastURL, supportedOS: ['android', 'web', 'ios']);
 
   @override
   Widget build(BuildContext context) {
