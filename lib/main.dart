@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:upgrader/upgrader.dart';
+import 'package:version_sync_poc/token.dart';
 
 void main() {
   runApp(const MyApp());
@@ -31,7 +32,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   static const appcastURL =
-      'https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/xmlappcast.xml';
+      'https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/xmlappcast.xml?$token';
   static final cfg = AppcastConfiguration(
     url: appcastURL,
   );
