@@ -32,13 +32,20 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   static final appcastURL =
       'https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/xmlappcast.xml';
-  static final cfg =
-      AppcastConfiguration(url: appcastURL, supportedOS: ['android', 'web', 'ios']);
+  static final cfg = AppcastConfiguration(
+    url: appcastURL,
+    supportedOS: ['android', 'web', 'ios'],
+  );
 
   @override
   Widget build(BuildContext context) {
     return UpgradeAlert(
-      upgrader: Upgrader(appcastConfig: cfg, debugLogging: true, canDismissDialog: false, debugDisplayAlways: true, ),
+      upgrader: Upgrader(
+        appcastConfig: cfg,
+        debugLogging: true,
+        canDismissDialog: false,
+        debugDisplayAlways: true,
+      ),
       child: Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
