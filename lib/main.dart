@@ -30,12 +30,11 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  static final appcastURL =
+  static const appcastURL =
       'https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/xmlappcast.xml';
   static final cfg = AppcastConfiguration(
     url: appcastURL,
-    supportedOS: ['android', 'web', 'ios'],
-  );
+\  );
 
   @override
   Widget build(BuildContext context) {
@@ -44,7 +43,6 @@ class _MyHomePageState extends State<MyHomePage> {
         appcastConfig: cfg,
         debugLogging: true,
         canDismissDialog: false,
-        debugDisplayAlways: true,
       ),
       child: Scaffold(
         appBar: AppBar(
