@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
       'https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/xmlappcast.xml';
   static final cfg = AppcastConfiguration(
     url: appcastURL,
-\  );
+  );
 
   @override
   Widget build(BuildContext context) {
