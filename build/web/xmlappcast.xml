@@ -8,12 +8,11 @@
     </item>
     <item>
       <title>iOS Release</title>
-      <enclosure sparkle:version="4.0" sparkle:os="ios"/>
+      <enclosure sparkle:version="4.0" sparkle:os="iOS"/>
     </item>
     <item>
       <title>Web Release</title>
       <enclosure sparkle:version="3.0.0" />
     </item>
-
   </channel>
 </rss>
