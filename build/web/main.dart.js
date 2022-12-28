@@ -19266,7 +19266,7 @@ this.c=null},
 j2:function j2(a,b){this.a=a
 this.b=b},
 a6N:function a6N(a){this.a=a},
-awj(a,b,c,d){var s,r,q,p,o,n=null,m=A.al9()
+awj(a,b,c){var s,r,q,p,o,n=null,m=A.al9()
 A.ahD()
 s=new A.ou(A.aN(t.Gf))
 $.aA.toString
@@ -19278,23 +19278,21 @@ r=p
 r=new A.a6N(r)
 o=A.jm()
 o=o
-if(d)A.ay("upgrader: instantiated.")
-return new A.a6M(a,!1,s,c,d,r,o,m)},
+if(c)A.ay("upgrader: instantiated.")
+return new A.a6M(a,!1,s,c,r,o,m)},
 Jq:function Jq(a,b){this.a=a
 this.b=b},
-RU:function RU(a,b){this.a=a
-this.b=b},
-a6M:function a6M(a,b,c,d,e,f,g,h){var _=this
+RU:function RU(a){this.b=a},
+a6M:function a6M(a,b,c,d,e,f,g){var _=this
 _.b=a
 _.c=b
 _.d=c
-_.r=d
-_.x=e
-_.Q=f
+_.x=d
+_.Q=e
 _.as=null
-_.ch=g
+_.ch=f
 _.cy=_.cx=!0
-_.dy=h
+_.dy=g
 _.fx=_.fr=!1
 _.p1=_.ok=_.k4=_.k3=_.k2=_.k1=_.id=_.go=_.fy=null
 _.p3=_.p2=!1},
@@ -65069,31 +65067,28 @@ s=1
 break
 case 1:return A.T(q,r)}})
 return A.U($async$qr,r)},
-Wv(){var s,r,q=this.b
-if(q!=null)s=q.b.length===0
+Wv(){var s,r=this.b
+if(r!=null)s=r.b.length===0
 else s=!0
 if(s)return!1
-r=B.b.t(q.a,this.dy)
-return r},
+r.toString
+return!0},
 a0i(a){var s,r,q,p,o=this
 if(!o.fr){s=o.HC()||o.p3
 r=o.x
 if(r){A.ay("upgrader: blocked: "+s)
-A.ay("upgrader: debugDisplayAlways: "+o.r)
+A.ay("upgrader: debugDisplayAlways: false")
 A.ay("upgrader: debugDisplayOnce: false")
 A.ay("upgrader: hasAlerted: "+o.p2)}if(s)o.cy=o.cx=!1
-if(!o.r)q=!1
-else q=!0
-if(q)p=!0
-else if(!o.a4q())p=!1
-else if(s)p=!0
-else{if(!o.a4p()){q=o.p1
-p=q!=null&&q===o.id
-if(p&&r)A.ay("upgrader: alreadyIgnoredThisVersion: true")
-q=p}else q=!0
-p=!q||!1}if(r)A.ay("upgrader: shouldDisplayUpgrade: "+p)
+if(!o.a4q())q=!1
+else if(s)q=!0
+else{if(!o.a4p()){p=o.p1
+q=p!=null&&p===o.id
+if(q&&r)A.ay("upgrader: alreadyIgnoredThisVersion: true")
+p=q}else p=!0
+q=!p||!1}if(r)A.ay("upgrader: shouldDisplayUpgrade: "+q)
 if(r)A.ay("upgrader: shouldDisplayReleaseNotes: "+o.BE())
-if(p){o.fr=!0
+if(q){o.fr=!0
 A.WK(B.o,new A.a6T(o,a),t.P)}}},
 HC(){var s,r,q,p,o=!1,n=this.as
 if(n!=null)try{s=A.fu(n)
@@ -65641,7 +65636,7 @@ P(a){return new A.vs(B.H6,"Flutter Demo",A.akV(null,B.fS,null),null)}}
 A.vG.prototype={
 al(){return new A.MD(B.m)}}
 A.MD.prototype={
-P(a){var s,r,q=null,p=A.awj($.ap1(),!1,!0,!0)
+P(a){var s,r,q=null,p=A.awj($.ap1(),!1,!0)
 this.a.toString
 s=A.lI("Version 6 Sync PoC",q,q,q,q,q,q)
 r=A.SU(A.To(A.a([new A.uF(A.av1(q,q,new A.t9("assets/robot.jpeg",q,q)),q)],t.F),B.ly,B.rf,B.rg),q,q)
@@ -71574,7 +71569,7 @@ return q})
 s($,"aDh","aoT",()=>A.bx("^([\\d.]+)(-([0-9A-Za-z\\-.]+))?(\\+([0-9A-Za-z\\-.]+))?$",!0))
 s($,"aDf","aoR",()=>A.bx("^[0-9A-Za-z\\-.]+$",!0))
 s($,"aDg","aoS",()=>A.bx("^[0-9A-Za-z\\-]+$",!0))
-s($,"aDx","ap1",()=>new A.RU(A.a(["android","web"],t.s),"https://raw.githubusercontent.com/larryaasen/upgrader/master/test/testappcast.xml"))
+s($,"aDx","ap1",()=>new A.RU("https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/lib/xmlappcast.xml?GHSAT0AAAAAABR3I2WYBV237ZROBRIU5WFKY5EJGNA"))
 s($,"aF4","ai3",()=>A.bx("[&<\\u0001-\\u0008\\u000b\\u000c\\u000e-\\u001f\\u007f-\\u0084\\u0086-\\u009f]|]]>",!0))
 s($,"aEH","apK",()=>A.bx("['&<\\n\\r\\t\\u0001-\\u0008\\u000b\\u000c\\u000e-\\u001f\\u007f-\\u0084\\u0086-\\u009f]",!0))
 s($,"aE7","api",()=>A.bx('["&<\\n\\r\\t\\u0001-\\u0008\\u000b\\u000c\\u000e-\\u001f\\u007f-\\u0084\\u0086-\\u009f]',!0))
