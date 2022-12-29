@@ -44,16 +44,26 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return UpgradeAlert(
       upgrader: Upgrader(
-        appcastConfig: cfg,
-        debugLogging: true,
-        canDismissDialog: false,
-        showIgnore: false,
-        durationUntilAlertAgain: Duration.zero,
-        onUpdate: () {
-          html.window.location.href = html.window.location.href;
-          return true;
-        },
-      ),
+          appcastConfig: cfg,
+          debugLogging: true,
+          canDismissDialog: false,
+          showIgnore: false,
+          durationUntilAlertAgain: Duration.zero,
+          onUpdate: () {
+            // html.window.location.href = html.window.location.href;
+            if (html.window.navigator.serviceWorker != null) {
+              html.window.navigator.serviceWorker!
+                  .getRegistration()
+                  .then((_) => {
+                        _
+                            .unregister()
+                            .then((_) => {html.window.location.reload()})
+                      });
+            } else {
+              html.window.location.reload();
+            }
+            return true;
+          }),
       child: Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
