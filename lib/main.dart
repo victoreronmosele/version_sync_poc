@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:universal_platform/universal_platform.dart';
 import 'package:upgrader/upgrader.dart';
 import 'package:version_sync_poc/token.dart';
 import 'dart:html' as html;
@@ -50,18 +51,25 @@ class _MyHomePageState extends State<MyHomePage> {
           showIgnore: false,
           durationUntilAlertAgain: Duration.zero,
           onUpdate: () {
-            // html.window.location.href = html.window.location.href;
-            if (html.window.navigator.serviceWorker != null) {
-              html.window.navigator.serviceWorker!
-                  .getRegistration()
-                  .then((_) => {
-                        _
-                            .unregister()
-                            .then((_) => {html.window.location.reload()})
-                      });
-            } else {
-              html.window.location.reload();
+            if (UniversalPlatform.isWeb) {
+              print('onUpdate called on web');
+              if (html.window.navigator.serviceWorker != null) {
+                html.window.navigator.serviceWorker!
+                    .getRegistration()
+                    .then((serviceWorkerRegistration) => {
+                          serviceWorkerRegistration
+                              .unregister()
+                              .then((_) => {html.window.location.reload()})
+                        });
+              } else {
+                html.window.location.reload();
+              }
+            } else if (UniversalPlatform.isAndroid) {
+              print('onUpdate called on android');
+            } else if (UniversalPlatform.isIOS) {
+              print('onUpdate called on ios');
             }
+
             return true;
           }),
       child: Scaffold(
