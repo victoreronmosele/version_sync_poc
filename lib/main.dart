@@ -32,7 +32,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   static const appcastURL =
-      'https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/lib/xmlappcast.xml?$token';
+      'https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/build/web/xmlappcast.xml?$token';
   static final cfg = AppcastConfiguration(
     url: appcastURL,
   );
