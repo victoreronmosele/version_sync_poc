@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:upgrader/upgrader.dart';
 import 'package:version_sync_poc/token.dart';
@@ -31,8 +33,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  static const appcastURL =
-      'https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/build/web/xmlappcast.xml?token=$token';
+  static final appcastURL =
+      'https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/build/web/xmlappcast.xml?random=${Random(double.maxFinite.toInt()).nextDouble()}';
   static final cfg = AppcastConfiguration(
     url: appcastURL,
   );
