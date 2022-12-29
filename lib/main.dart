@@ -34,7 +34,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   static final appcastURL =
-      'https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/build/web/xmlappcast.xml?random=${Random(double.maxFinite.toInt()).nextDouble()}';
+      'https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/build/web/xmlappcast.xml?random=${Random().nextDouble()}';
   static final cfg = AppcastConfiguration(
     url: appcastURL,
   );

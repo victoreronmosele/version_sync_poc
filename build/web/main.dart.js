@@ -35538,7 +35538,7 @@ $ibK:1}
 A.a9V.prototype={
 Kp(){return Math.random()}}
 A.ab2.prototype={
-RS(a){var s,r,q,p,o,n,m,l=this,k=4294967296,j=a<0?-1:0
+RS(a){var s,r,q,p,o,n,m,l=this,k=4294967296
 do{s=a>>>0
 a=B.f.bG(a-s,k)
 r=a>>>0
@@ -35564,7 +35564,7 @@ l.b=m
 n=(n^p)>>>0
 l.a=n
 o=(m^r+((r<<31|s>>>1)>>>0)+o>>>0)>>>0
-l.b=o}while(a!==j)
+l.b=o}while(a!==0)
 if(o===0&&n===0)l.a=23063
 l.lL()
 l.lL()
@@ -71623,7 +71623,7 @@ return q})
 s($,"aDl","aoV",()=>A.bx("^([\\d.]+)(-([0-9A-Za-z\\-.]+))?(\\+([0-9A-Za-z\\-.]+))?$",!0))
 s($,"aDj","aoT",()=>A.bx("^[0-9A-Za-z\\-.]+$",!0))
 s($,"aDk","aoU",()=>A.bx("^[0-9A-Za-z\\-]+$",!0))
-s($,"aDB","ap3",()=>"https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/build/web/xmlappcast.xml?random="+A.e(A.auU(17976931348623157e292).Kp()))
+s($,"aDB","ap3",()=>"https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/build/web/xmlappcast.xml?random="+A.e(A.auU(null).Kp()))
 s($,"aDC","ap4",()=>new A.RU($.ap3()))
 s($,"aF9","ai5",()=>A.bx("[&<\\u0001-\\u0008\\u000b\\u000c\\u000e-\\u001f\\u007f-\\u0084\\u0086-\\u009f]|]]>",!0))
 s($,"aEM","apN",()=>A.bx("['&<\\n\\r\\t\\u0001-\\u0008\\u000b\\u000c\\u000e-\\u001f\\u007f-\\u0084\\u0086-\\u009f]",!0))
