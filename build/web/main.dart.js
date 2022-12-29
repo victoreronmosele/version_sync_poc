@@ -19266,7 +19266,7 @@ this.c=null},
 j2:function j2(a,b){this.a=a
 this.b=b},
 a6N:function a6N(a){this.a=a},
-awj(a,b,c){var s,r,q,p,o,n=null,m=A.al9()
+awj(a,b,c,d,e){var s,r,q,p,o,n=null,m=A.al9()
 A.ahD()
 s=new A.ou(A.aN(t.Gf))
 $.aA.toString
@@ -19279,20 +19279,22 @@ r=new A.a6N(r)
 o=A.jm()
 o=o
 if(c)A.ay("upgrader: instantiated.")
-return new A.a6M(a,!1,s,c,r,o,m)},
+return new A.a6M(a,!1,s,c,d,r,o,e,m)},
 Jq:function Jq(a,b){this.a=a
 this.b=b},
 RU:function RU(a){this.b=a},
-a6M:function a6M(a,b,c,d,e,f,g){var _=this
+a6M:function a6M(a,b,c,d,e,f,g,h,i){var _=this
 _.b=a
 _.c=b
 _.d=c
 _.x=d
-_.Q=e
+_.z=e
+_.Q=f
 _.as=null
-_.ch=f
-_.cy=_.cx=!0
-_.dy=g
+_.ch=g
+_.cx=h
+_.cy=!0
+_.dy=i
 _.fx=_.fr=!1
 _.p1=_.ok=_.k4=_.k3=_.k2=_.k1=_.id=_.go=_.fy=null
 _.p3=_.p2=!1},
@@ -65098,9 +65100,10 @@ r=A.fu(n)
 n=s
 o=n instanceof A.hQ&&A.qH(r,n)<0}catch(p){q=A.a8(p)
 A.ay(q)}return o},
-a4p(){if(this.k4==null)return!1
-var s=A.cq(0,Date.now()-this.k4.a).a<2592e8
-if(s&&this.x)A.ay("upgrader: isTooSoon: true")
+a4p(){var s,r=this
+if(r.k4==null)return!1
+s=A.cq(0,Date.now()-r.k4.a).a<r.z.a
+if(s&&r.x)A.ay("upgrader: isTooSoon: true")
 return s},
 a4q(){var s,r,q,p,o,n,m,l=this,k="upgrader: isUpdateAvailable: ",j=l.x
 if(j){A.ay("upgrader: appStoreVersion: "+A.e(l.id))
@@ -65636,7 +65639,7 @@ P(a){return new A.vs(B.H6,"Flutter Demo",A.akV(null,B.fS,null),null)}}
 A.vG.prototype={
 al(){return new A.MD(B.m)}}
 A.MD.prototype={
-P(a){var s,r,q=null,p=A.awj($.ap1(),!1,!0)
+P(a){var s,r,q=null,p=A.awj($.ap1(),!1,!0,B.o,!1)
 this.a.toString
 s=A.lI("Version 6 Sync PoC",q,q,q,q,q,q)
 r=A.SU(A.To(A.a([new A.uF(A.av1(q,q,new A.t9("assets/robot.jpeg",q,q)),q)],t.F),B.ly,B.rf,B.rg),q,q)

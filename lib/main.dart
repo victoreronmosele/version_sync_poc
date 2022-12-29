@@ -44,6 +44,8 @@ class _MyHomePageState extends State<MyHomePage> {
         appcastConfig: cfg,
         debugLogging: true,
         canDismissDialog: false,
+        showIgnore: false,
+        durationUntilAlertAgain: Duration.zero,
       ),
       child: Scaffold(
         appBar: AppBar(
