@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:upgrader/upgrader.dart';
 import 'package:version_sync_poc/token.dart';
+import 'dart:html' as html;
 
 void main() {
   runApp(const MyApp());
@@ -48,6 +49,10 @@ class _MyHomePageState extends State<MyHomePage> {
         canDismissDialog: false,
         showIgnore: false,
         durationUntilAlertAgain: Duration.zero,
+        onUpdate: () {
+          html.window.location.reload();
+          return true;
+        },
       ),
       child: Scaffold(
         appBar: AppBar(
