@@ -3,6 +3,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:universal_platform/universal_platform.dart';
 import 'package:upgrader/upgrader.dart';
+import 'package:url_launcher/url_launcher.dart';
 import 'package:version_sync_poc/token.dart';
 import 'dart:html' as html;
 
@@ -41,6 +42,19 @@ class _MyHomePageState extends State<MyHomePage> {
     url: appcastURL,
   );
 
+  static const APP_STORE_URL =
+      'https://apps.apple.com/us/app/given/id1454844119';
+  static const PLAY_STORE_URL =
+      'https://play.google.com/store/apps/details?id=app.given.Given';
+
+  _launchURL(String url) async {
+    if (await canLaunchUrl(Uri.parse(url))) {
+      await launchUrl(Uri.parse(url));
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return UpgradeAlert(
@@ -66,8 +80,10 @@ class _MyHomePageState extends State<MyHomePage> {
               }
             } else if (UniversalPlatform.isAndroid) {
               print('onUpdate called on android');
+              _launchURL(PLAY_STORE_URL);
             } else if (UniversalPlatform.isIOS) {
               print('onUpdate called on ios');
+              _launchURL(APP_STORE_URL);
             }
 
             return true;

@@ -19419,7 +19419,7 @@ vH:function vH(a){this.a=a},
 ME:function ME(a){this.a=null
 this.b=a
 this.c=null},
-aaK:function aaK(){},
+aaK:function aaK(a){this.a=a},
 aaJ:function aaJ(){},
 aaI:function aaI(){},
 eR:function eR(a,b,c,d){var _=this
@@ -65647,7 +65647,7 @@ P(a){return new A.vt(B.H6,"Flutter Demo",A.akZ(null,B.fS,null),null)}}
 A.vH.prototype={
 al(){return new A.ME(B.m)}}
 A.ME.prototype={
-P(a){var s,r,q=null,p=A.awn($.ap5(),!1,!0,B.o,new A.aaK(),!1)
+P(a){var s,r,q=null,p=A.awn($.ap5(),!1,!0,B.o,new A.aaK(this),!1)
 this.a.toString
 s=A.lJ("Version 6 Sync PoC",q,q,q,q,q,q)
 r=A.SV(A.Tp(A.a([new A.uG(A.av5(q,q,new A.ta("assets/robot.jpeg",q,q)),q)],t.F),B.ly,B.rf,B.rg),q,q)
