@@ -50,7 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
         showIgnore: false,
         durationUntilAlertAgain: Duration.zero,
         onUpdate: () {
-          html.window.location.reload();
+          html.window.location.href = html.window.location.href;
           return true;
         },
       ),

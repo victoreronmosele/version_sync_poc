@@ -65649,7 +65649,7 @@ s=A.lI("Version 6 Sync PoC",q,q,q,q,q,q)
 r=A.SU(A.To(A.a([new A.uF(A.av2(q,q,new A.t9("assets/robot.jpeg",q,q)),q)],t.F),B.ly,B.rf,B.rg),q,q)
 return new A.Jo(new A.x2(new A.t8(s,new A.Nu(q,q,1/0,56),q),r,q),p,q)}}
 A.aaH.prototype={
-$0(){window.location.reload()
+$0(){window.location.href=window.location.href
 return!0},
 $S:1}
 A.eR.prototype={
