@@ -33,8 +33,8 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  static final appcastURL =
-      'https://raw.githubusercontent.com/victoreronmosele/version_sync_poc/master/build/web/xmlappcast.xml?version=${Random().nextDouble()}';
+  static const appcastURL =
+      'https://scintillating-gingersnap-7481a0.netlify.app/xmlappcast.xml';
   static final cfg = AppcastConfiguration(
     url: appcastURL,
   );
