@@ -5,7 +5,7 @@ import 'package:universal_platform/universal_platform.dart';
 import 'package:upgrader/upgrader.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:version_sync_poc/token.dart';
-import 'dart:html' as html;
+// import 'dart:html' as html;
 
 void main() {
   runApp(const MyApp());
@@ -67,26 +67,27 @@ class _MyHomePageState extends State<MyHomePage> {
           onUpdate: () {
             if (UniversalPlatform.isWeb) {
               print('onUpdate called on web');
-              if (html.window.navigator.serviceWorker != null) {
-                html.window.navigator.serviceWorker!
-                    .getRegistration()
-                    .then((serviceWorkerRegistration) => {
-                          serviceWorkerRegistration
-                              .unregister()
-                              .then((_) => {html.window.location.reload()})
-                        });
-              } else {
-                html.window.location.reload();
-              }
+              // if (html.window.navigator.serviceWorker != null) {
+              //   html.window.navigator.serviceWorker!
+              //       .getRegistration()
+              //       .then((serviceWorkerRegistration) => {
+              //             serviceWorkerRegistration
+              //                 .unregister()
+              //                 .then((_) => {html.window.location.reload()})
+              //           });
+              // } else {
+              //   html.window.location.reload();
+              // }
             } else if (UniversalPlatform.isAndroid) {
               print('onUpdate called on android');
               _launchURL(PLAY_STORE_URL);
             } else if (UniversalPlatform.isIOS) {
               print('onUpdate called on ios');
               _launchURL(APP_STORE_URL);
+              setState(() {});
             }
 
-            return true;
+            return false;
           }),
       child: Scaffold(
         appBar: AppBar(
