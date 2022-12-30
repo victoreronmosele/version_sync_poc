@@ -1,0 +1,6 @@
+/index.html
+  Cache-Control: max-age=604800, immutable
+/xmlappcast.xml
+  Content-Type: text/plain; charset=utf-8
+/test.xml
+  Content-Type: text/plain; charset=utf-8
